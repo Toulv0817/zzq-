@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ActivitySay"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@mipmap/common_icon_back_black_n"
+                android:id="@+id/re_fh" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="周某人"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:id="@+id/name" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:id="@+id/say_rec" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/shuaa"
+                android:layout_width="30dp"
+                android:src="@mipmap/yy"
+                android:layout_height="30dp" />
+
+            <EditText
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:id="@+id/send_name"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按住说话"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:layout_weight="1"
+                android:id="@+id/azsh"/>
+            <ImageView
+                android:id="@+id/expression"
+                android:layout_width="30dp"
+                android:src="@mipmap/xl"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:id="@+id/say_pic"
+                android:layout_width="30dp"
+                android:src="@mipmap/say_tp"
+                android:layout_height="30dp" />
+
+            <Button
+                android:id="@+id/say_btn"
+                android:text="发送"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:visibility="gone"
+            android:id="@+id/expressionrec"/>
+
+    </LinearLayout>
+</layout>

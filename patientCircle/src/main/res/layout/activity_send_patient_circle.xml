@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sendbyq_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/boy" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/common_nav_message_black_n" />
+            </RelativeLayout>
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入标题（最多20个字）"
+                android:id="@+id/add_tital" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:hint="请选择就诊科室"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:id="@+id/add_ks" />
+                <ImageView
+                    android:id="@+id/jzks"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:src="@mipmap/circle_icon_drop_down_n"/>
+            </RelativeLayout>
+<!--            <Spinner-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:spinnerMode="dialog"-->
+<!--                android:id="@+id/add_ks" />-->
+            <!--        <Spinner-->
+            <!--            android:layout_marginHorizontal="20dp"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="80dp"-->
+            <!--            android:spinnerMode="dialog"-->
+            <!--            android:id="@+id/add_bz"/>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:hint="请选择主要病症"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:id="@+id/add_bz" />
+                <ImageView
+                    android:id="@+id/zybz"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_30"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:src="@mipmap/circle_icon_drop_down_n"/>
+            </RelativeLayout>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint=" 请输入病症详情 "
+                android:background="@null"
+                android:id="@+id/add_data" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="#03A9F4"
+                android:text="不超过300字"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="请输入最近一段治经历" />
+
+            <LinearLayout
+                android:layout_marginHorizontal="@dimen/dp_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_bj"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="请输入医院名称"
+                    android:id="@+id/add_yyname" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:hint="请输入医院开始时间"
+                        android:id="@+id/add_palytime" />
+                    <ImageView
+                        android:id="@+id/start_time"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:src="@mipmap/circle_icon_drop_down_n"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:hint="请输入医院开始时间"
+                        android:id="@+id/add_stoptime" />
+                    <ImageView
+                        android:id="@+id/stop_time"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:src="@mipmap/circle_icon_drop_down_n"/>
+                </RelativeLayout>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="请输入治疗过程"
+                    android:background="@null"
+                    android:id="@+id/add_gc" />
+            </LinearLayout>
+
+            <TextView
+                android:background="#D5D0D0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="最多可添加6张图片;长按为图片排序"
+                android:layout_marginHorizontal="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_rec" />
+            <!--        <ImageView-->
+            <!--            android:layout_marginHorizontal="20dp"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:src="@mipmap/add"-->
+            <!--            android:id="@+id/add_pic"/>-->
+            <EditText
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5D0D0"
+                android:hint="输入悬赏额度"
+                android:id="@+id/add_price" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:text="发送"
+                android:id="@+id/add_btn" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

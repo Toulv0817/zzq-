@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginHorizontal="@dimen/dp_100"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <TextView
+        android:id="@+id/lz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正在录制"
+        android:textSize="@dimen/dp_30"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/sj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp_20"
+        android:gravity="center"
+        android:text="1s"/>
+</LinearLayout>

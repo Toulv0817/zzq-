@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sta"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/common_button_collection_large_n"
+            android:id="@+id/sc1"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/common_icon_attention_small_n"
+            android:id="@+id/dz"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/common_icon_close_live_commenting_n"
+            android:id="@+id/dm"/>
+        <ImageView
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/buy"
+            android:id="@+id/gm"/>
+    </LinearLayout>
+</RelativeLayout>

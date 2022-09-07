@@ -1,0 +1,138 @@
+//plugins {
+//    id 'com.android.library'
+//}
+if(isDebug){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
+
+android {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+
+    defaultConfig {
+
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true//大于65536
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    api "android.arch.lifecycle:extensions:1.1.1"
+    // OkHttp的依赖库
+    api 'com.squareup.okhttp3:okhttp:4.9.0'
+//OkHttp日志拦截器依赖
+    api 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+/* Retrofit 依赖 */
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+/* RxJava 依赖 */
+    api 'io.reactivex.rxjava2:rxjava:2.0.1'
+/* RxAndroid 依赖 */
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+/* Retrofit支持RxJava2 依赖 */
+    api 'com.squareup.retrofit2:adapter-rxjava2:+'
+/* Gson转换器 依赖 */
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.github.bumptech.glide:glide:4.9.0'//glide依赖
+    api 'com.alibaba:arouter-api:1.5.1'
+    api 'com.alibaba:arouter-compiler:1.5.1'
+
+    api 'com.xhb:xbanner:1.2.2'//XBanner依赖
+
+    api 'com.google.android.material:material:1.2.1'
+
+
+    api 'q.rorbin:VerticalTabLayout:1.2.5'
+    api 'com.zhy:base-rvadapter:3.0.3'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'//第三方适配器
+    //数据库依赖
+    api 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+    //完整版引入//视频依赖
+    api 'com.shuyu:GSYVideoPlayer:4.1.2'
+    api 'com.shuyu:gsyVideoPlayer-java:4.1.2'
+//    api 'com.shuyu:gsyVideoPlayer-java:6.0.1'
+////是否需要ExoPlayer模式
+//    api 'com.shuyu:GSYVideoPlayer-exo2:6.0.1'
+    api 'cn.jiguang.sdk:jmessage:2.9.2'  // 此处以JMessage 2.9.2 版本为例。
+    api 'cn.jiguang.sdk:jbasic:3.1.0'  // 此处以 jbasic 3.1.0 版本为例，若同时集成推送/认证，可不需要添加 jbasic 依赖，直接使用 jcore。
+//    api 'com.kd.easybarrage:library:0.0.1'//弹幕列表
+    api 'com.kd.easybarrage:library:0.0.1'
+    //EventBus
+    api 'org.greenrobot:eventbus:3.2.0'
+
+    api  'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    api  'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    api  'io.github.scwang90:refresh-footer-classics:2.0.5'    //经典加载
+
+
+//    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    //图片加载
+//    api 'com.github.bumptech.glide:glide:4.8.0'
+//    //图片选择器
+//
+//    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.8'
+//    //权限请求
+//    api 'com.hjq:xxpermissions:2.0'
+//    api 'id.zelory:compressor:2.0.0'
+    // 图片压缩框架a
+//    api 'io.github.lucksiege:pictureselector:v2.7.3-rc10' //图片选择
+//    implementation 'com.alibaba:arouter-api:1.5.1''
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1''
+
+//
+//    api rootProject.ext.dependencies["arouter"]
+//    api rootProject.ext.dependencies["arouter-compiler"]
+    // 图片压缩框架a
+    api 'id.zelory:compressor:2.1.0'
+    //图片选择器
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.8'
+    //权限请求
+    api 'com.hjq:xxpermissions:6.5'
+    //图片加载
+    api 'com.github.bumptech.glide:glide:4.8.0'
+    api 'com.android.support:multidex:1.0.3'
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'//微信SDK
+
+
+
+}

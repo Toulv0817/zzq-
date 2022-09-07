@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dp_100"
+        android:src="@mipmap/boy"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/dp_100"
+        android:id="@+id/con_pic"/>
+    <TextView
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="啦啦啦"
+        android:id="@+id/con_name"/>
+</LinearLayout>

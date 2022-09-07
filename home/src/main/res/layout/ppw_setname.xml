@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginHorizontal="@dimen/dp_50"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="@dimen/dp_60"
+        android:hint="输入要修改的昵称"
+        android:id="@+id/setname"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:id="@+id/setbtn"/>
+
+</LinearLayout>

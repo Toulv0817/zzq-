@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wd.home">
+
+    <application
+        android:name="com.wd.common.base.Init"
+        android:theme="@style/Theme.Health">
+        <activity android:name=".ActivityDoctorXq"></activity>
+        <activity android:name=".ActivityUrl" />
+        <activity android:name=".ActivityBuyVideo" />
+        <activity android:name=".ActivityMyCollect" />
+        <activity android:name=".ActivityMoney" />
+        <activity android:name=".Activity_PutMyFile" />
+        <activity android:name=".ActivityAddMyfile" />
+        <activity android:name=".view.ActivitySay" />
+        <activity android:name=".view.Activity_MySet" />
+        <activity android:name=".ActivityConsultation" />
+        <activity android:name=".ActivitySearch" />
+        <activity android:name=".ActivityMy" />
+        <activity android:name=".ActivityDrugXq" />
+        <activity android:name=".ActivityDiseaseXq" />
+        <activity android:name=".ActivityZXBD" />
+        <activity android:name=".ActivityXq" />
+        <activity android:name=".ActivityLoginReg" />
+        <activity android:name=".ActivityReg" />
+        <activity android:name=".ActivityFile" />
+    </application>
+
+</manifest>

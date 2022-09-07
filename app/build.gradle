@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.application'
+}
+//if(isDebug){
+//    apply plugin: 'com.android.application'
+//}else{
+//    apply plugin: 'com.android.library'
+//}
+android {
+    signingConfigs {
+        myConfig {
+            storeFile file('E:\\health.keystore')
+            storePassword '123456'
+            keyAlias 'health'
+            keyPassword '123456'
+        }
+    }
+
+
+
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+
+    defaultConfig {
+
+        applicationId "com.wd.health"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "c7f6a1d56cb8da740fd18bfa", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true//大于65536
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+//    debug {
+//        minifyEnabled false
+//        signingConfig signingConfigs.myConfig
+//        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation project(path: ':home')
+    implementation project(path: ':video')
+    implementation project(path: ':patientCircle')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation  project(':common')
+    implementation 'com.alibaba:arouter-api:1.5.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'//微信SDK
+
+//    api'com.alibaba:arouter-api:1.4.1'
+//    annotationProcessor'com.alibaba:arouter-compiler:1.2.2'
+//    if(!b){
+//        implementation project(':loginandreg')
+//    }
+}

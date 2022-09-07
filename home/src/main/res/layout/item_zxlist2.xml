@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/dp_10"
+    android:layout_marginVertical="@dimen/dp_10"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_100"
+        android:id="@+id/zxlist2_pic"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_80"
+            android:textSize="@dimen/dp_25"
+            android:text="怕啊怕啊啪啪啪啪啪啪so"
+            android:id="@+id/zxlsit2_tital"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阿拉啦"
+                android:id="@+id/zxlist2_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15555"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:id="@+id/zxlist2_phone"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

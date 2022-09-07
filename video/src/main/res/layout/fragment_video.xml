@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/purple_200"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/video_rec"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:id="@+id/video_tab"
+            android:layout_height="@dimen/dp_60" />
+        <com.kd.easybarrage.BarrageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bar"/>
+
+    </RelativeLayout>
+</layout>
